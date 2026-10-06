@@ -1,6 +1,18 @@
 # Move Fits — Landing Page
 
-Pixel-matched build of the Move Fits Figma design (1440px desktop frame).
+**Live site: [movefits.vercel.app](https://movefits.vercel.app)**
+
+Fitness studio website built pixel-for-pixel from a Figma design: Next.js 16 frontend with
+GSAP smooth-scroll animations, Django REST backend for walkthrough requests.
+
+![Move Fits hero](docs/hero.jpg)
+
+<details>
+<summary>Full page</summary>
+
+![Move Fits full page](docs/full-page.jpg)
+
+</details>
 
 - **frontend/** — Next.js 16 (App Router, TypeScript, Tailwind CSS v4)
 - **backend/** — Django 6.1 + Django REST Framework (walkthrough request API + admin)
