@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Fonts (set in layout.tsx via next/font) */
+  --font-display: var(--font-syne);
+  --font-sans: var(--font-space-grotesk);
+  --font-label: var(--font-archivo);
+
+  /* Palette sampled from the Move Fits Figma */
+  --color-canvas: #f4f2f4;
+  --color-paper: #fbfbfb;
+  --color-card: #f6f6f6;
+  --color-stone: #ebeae9;
+
+  --color-forest-950: #111a11;
+  --color-forest-900: #28362a;
+  --color-forest-800: #3a4d3d;
+  --color-forest-700: #59725d;
+  --color-forest-600: #778e7b;
+  --color-forest-400: #97ac9a;
+
+  --color-graphite: #212123;
+  --color-ash: #898989;
+  --color-ink-700: #444648;
+  --color-ink-600: #505254;
+  --color-ink-500: #6b6b6e;
+  --color-ink-400: #7b7b7d;
+
+  --color-sun: #ffe272;
+  --color-sun-soft: #ffeb99;
+  --color-gold: #edd15e;
+  --color-gold-deep: #c8ac3b;
+  --color-clay: #957056;
+  --color-blush: #e4d3e4;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-graphite);
+  font-family: var(--font-space-grotesk), system-ui, sans-serif;
+}
+
+/* Archivo semi-condensed, used for uppercase UI labels */
+.font-label {
+  font-stretch: 87.5%;
+}
+
+section[id] {
+  scroll-margin-top: 94px;
+}
+
+/* Header shadow once the page has scrolled (toggled by Motion.tsx) */
+[data-site-header] {
+  transition: box-shadow 0.4s ease;
+}
+[data-site-header].is-scrolled {
+  box-shadow: 0 6px 24px rgba(17, 26, 17, 0.08);
+}
+
+/* Hide animated elements until GSAP reveals them (only when JS runs and motion is allowed) */
+@media (prefers-reduced-motion: no-preference) {
+  html.js [data-site-header],
+  html.js [data-hero="tags"] > li,
+  html.js [data-hero="title"],
+  html.js [data-hero="body"],
+  html.js [data-hero="ctas"] > *,
+  html.js [data-hero="stats"],
+  html.js [data-hero="card"],
+  html.js [data-hero="caption"],
+  html.js [data-pill],
+  html.js [data-section-head] h2,
+  html.js [data-lead],
+  html.js [data-reveal],
+  html.js [data-stagger] > *,
+  html.js [data-clip] {
+    visibility: hidden;
+  }
+}

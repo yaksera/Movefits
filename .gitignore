@@ -1,0 +1,19 @@
+# Python
+backend/.venv/
+backend/db.sqlite3
+__pycache__/
+*.pyc
+
+# Local tooling / editor
+.claude/
+frontend/CLAUDE.md
+frontend/AGENTS.md
+design-vs-build.png
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
